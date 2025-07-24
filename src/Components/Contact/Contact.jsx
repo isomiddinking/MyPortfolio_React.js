@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
-// No direct CSS import here, as the CSS will be provided as a separate style block in the same immersive.
+import './Contact.css'
 
 const Contact = () => {
     return (
