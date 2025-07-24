@@ -1,0 +1,146 @@
+.container {
+    width: 350px;
+    height: 100vh;
+    background-color: #040b14;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+}
+
+.container_sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 150px;
+    padding: 20px;
+}
+
+.img_top_box {
+    width: 115px;
+    height: 115px;
+    background-color: rgb(68, 68, 68);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.img_top_box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.social_icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.social_icon_item a {
+    color: white;
+    font-size: 18px;
+}
+
+.social_icon_item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(68, 68, 68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.social_icon_item:hover {
+    background-color: rgb(0, 183, 255);
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 50px;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Aktive navlink (ebr) */
+ul li .ebr {
+    color: rgb(0, 183, 255);
+    font-weight: bold;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: rgb(0, 183, 255);
+}
+
+/* Menyu tugmasi */
+.menyu_container {
+    width: 40px;
+    height: 40px;
+    background-color: #10dee9;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 100000;
+    cursor: pointer;
+    display: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu_icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .container {
+        left: -350px;
+    }
+
+    .container.open {
+        left: 0;
+    }
+
+    .menyu_container {
+        display: flex;
+    }
+}

@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Barcha brauzerlar uchun asosiy sozlama */
+::-webkit-scrollbar {
+  width: 0px;         /* vertikal scroll kengligi */
+  height:8px;         /* gorizontal scroll balandligi */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* scroll orqasidagi fon */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;     /* scrollning o'zi */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;     /* hover qilganda rangi */
+}

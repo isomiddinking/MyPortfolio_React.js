@@ -1,0 +1,401 @@
+@import url('[https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap)');
+
+/* Base styles for the contact section */
+.contact-section {
+    /* Removed fixed margin-left to allow full responsiveness */
+    padding: 50px 20px; /* Adjusted padding for better default spacing */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif; /* Applied Inter font */
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+/* Container for the contact information and form */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Wrapper for contact info and map */
+.contact-info-map-wrapper {
+    flex: 1; /* Allows this section to grow and shrink */
+    min-width: 300px; /* Minimum width before wrapping */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Styling for individual contact info items */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+
+.icon-wrapper {
+    font-size: 24px;
+    color: #60A5FA;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Prevents icon from shrinking */
+}
+
+.text-content h3 {
+    font-size: 20px;
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.text-content p {
+    font-size: 15px;
+    color: #666666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Map container styling */
+.map-container {
+    width: 100%;
+    height: 290px; /* Fixed height for consistency on larger screens */
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Contact form wrapper */
+.contact-form-wrapper {
+    flex: 2; /* Allows this section to grow more than the info section */
+    min-width: 300px; /* Minimum width before wrapping */
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow form groups in a row to wrap */
+}
+
+.form-group {
+    flex: 1; /* Allows form groups to take equal space */
+    display: flex;
+    flex-direction: column;
+    min-width: 150px; /* Ensure inputs don't become too narrow */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #60A5FA;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.send-message-button {
+    background-color: #60A5FA;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(96, 165, 250, 0.3);
+    box-sizing: border-box;
+    width: fit-content; /* Adjust width to content */
+}
+
+.send-message-button:hover {
+    background-color: #4A90E2;
+    transform: translateY(-2px);
+}
+
+.sr-only {
+    position: absolute; /* Changed from clip to absolute for better accessibility */
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Responsive Styles */
+
+/* For screens smaller than 1024px (Tablets and smaller desktops) */
+@media (max-width: 1024px) {
+    .contact-section {
+        padding: 40px 20px; /* Slightly less padding */
+    }
+
+    .contact-container {
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .contact-info-map-wrapper,
+    .contact-form-wrapper {
+        min-width: unset; /* Remove min-width to allow full flexibility */
+        width: 100%; /* Take full width */
+    }
+
+    .form-group-row {
+        flex-direction: column; /* Stack name and email inputs */
+        gap: 15px;
+    }
+}
+
+/* For screens smaller than 768px (Larger mobile devices) */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 30px 15px; /* Further reduced padding */
+    }
+
+    .contact-container {
+        padding: 25px;
+        gap: 25px;
+    }
+
+    .info-item {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .icon-wrapper {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .text-content h3 {
+        font-size: 18px;
+    }
+
+    .text-content p {
+        font-size: 14px;
+    }
+
+    .map-container {
+        height: 250px; /* Slightly reduced map height */
+    }
+
+    .contact-form-wrapper {
+        padding: 25px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+    .send-message-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
+/* For screens smaller than 480px (Most mobile devices) */
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 20px 10px; /* Minimal padding */
+    }
+
+    .contact-container {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .info-item {
+        flex-direction: column; /* Stack icon and text vertically */
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .icon-wrapper {
+        margin-bottom: 10px; /* Space between icon and text when stacked */
+    }
+
+    .text-content h3 {
+        font-size: 16px;
+    }
+
+    .text-content p {
+        font-size: 13px;
+    }
+
+    .map-container {
+        height: 200px; /* Further reduced map height */
+    }
+
+    .contact-form-wrapper {
+        padding: 20px;
+    }
+
+    .form-group-row {
+        gap: 10px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .send-message-button {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+
+/* For very small screens, down to 150px (e.g., old/small mobile devices) */
+@media (max-width: 320px) {
+    .contact-section {
+        padding: 15px 5px; /* Very minimal padding */
+    }
+
+    .contact-container {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .info-item {
+        padding: 10px;
+        gap: 5px; /* Reduced gap */
+    }
+
+    .icon-wrapper {
+        font-size: 18px; /* Smaller icon */
+        padding: 8px; /* Smaller padding for icon */
+        margin-bottom: 5px; /* Reduced margin */
+    }
+
+    .text-content h3 {
+        font-size: 15px; /* Smaller heading */
+    }
+
+    .text-content p {
+        font-size: 12px; /* Smaller paragraph text */
+    }
+
+    .map-container {
+        height: 150px; /* Minimum practical height for map */
+    }
+
+    .contact-form-wrapper {
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 6px 8px; /* Reduced input padding */
+        font-size: 13px; /* Smaller input font */
+        min-height: 80px; /* Ensure textarea is still usable */
+    }
+
+    .send-message-button {
+        padding: 8px 15px; /* Smaller button padding */
+        font-size: 14px; /* Smaller button font */
+        margin-top: 15px; /* Reduced margin */
+    }
+}
+
+/* Ensure elements don't go below 150px total width if possible,
+   though content might become very condensed. */
+@media (max-width: 150px) {
+    .contact-section,
+    .contact-container,
+    .info-item,
+    .contact-form-wrapper,
+    .form-group input,
+    .form-group textarea,
+    .send-message-button {
+        /* This is a fallback to prevent total collapse,
+           but layout will be extremely tight. */
+        min-width: auto; /* Allow content to shrink as much as possible */
+        word-wrap: break-word; /* Break long words */
+        overflow-wrap: break-word; /* Modern equivalent */
+    }
+
+    .text-content h3 {
+        font-size: 14px;
+    }
+    .text-content p {
+        font-size: 11px;
+    }
+    .form-group input,
+    .form-group textarea {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+    .send-message-button {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+    .map-container {
+        height: 100px; /* Absolute minimum height */
+    }
+}

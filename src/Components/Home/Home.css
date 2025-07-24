@@ -1,0 +1,139 @@
+.home-container {
+    margin-left: 320px;
+    padding: 50px;
+    min-height: 100vh;
+    background-image: linear-gradient(150deg, #48c6ef 0%, #6f86d6 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: sans-serif;
+    transition: all 0.3s ease;
+}
+
+.home-container h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.home-container h3 {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.typing {
+    color: #00ffcc;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.cursor {
+    display: inline-block;
+    margin-left: 2px;
+    width: 1px;
+    height: 1em;
+    background-color: #fff;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Scroll qilinganda chiqadigan blok */
+.scroll-box {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font-size: 18px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+    .home-container {
+        margin-left: 0px;
+        padding: 40px;
+    }
+
+    .home-container h2 {
+        font-size: 42px;
+    }
+
+    .home-container h3 {
+        font-size: 22px;
+    }
+
+    .typing {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        margin-left: 0;
+        padding: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home-container h2 {
+        font-size: 36px;
+    }
+
+    .home-container h3 {
+        font-size: 20px;
+    }
+
+    .typing {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-container {
+        padding: 20px;
+    }
+
+    .home-container h2 {
+        font-size: 28px;
+    }
+
+    .home-container h3 {
+        font-size: 18px;
+    }
+
+    .typing {
+        font-size: 20px;
+    }
+
+    .scroll-box {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 350px) {
+    .home-container h2 {
+        font-size: 24px;
+    }
+
+    .home-container h3 {
+        font-size: 16px;
+    }
+
+    .typing {
+        font-size: 20px;
+    }
+}
